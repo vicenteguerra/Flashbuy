@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCookies'])
 
 
 /*Controlador para hacer la funcionalidad a Index*/
@@ -15,15 +15,18 @@ angular.module('starter.controllers', [])
 })
 
 /*Controlador para hacer la funcionalidad a login*/
-.controller('LoginCtrl', function($scope, $http) {
+.controller('LoginCtrl', function($scope, $http, $state) {
+  $scope.errorAuth = false;
   $scope.envia = function(){
-    $http.post('http://mastersofcode.com/api/customer',{
+    $http.post('http://mastersofcode.com/auth/login',{
       "email" : this.email,
-      "password" : this.pass,
-      "customer_type_id" : 1
-    }).success(function(data){
-      console.log(data.password);
-
+      "password" : this.pass
+    }).success(function(data, status, xtr){
+      console.log("Login");
+        $state.go('tab.register');
+    }).error(function(data){
+      console.log("No: " + data.error);
+      $scope.errorAuth = true;
     })
   }
   /*
@@ -37,6 +40,21 @@ angular.module('starter.controllers', [])
   var header = angular.element(document.querySelector('.bar-stable'));
   header.remove();
   tab.remove();
+
+  $scope.enviar = function(){
+    console.log(this.first_name, this.last_name, this.birth_date,this.gender,this.email,this.pass);
+    $http.post('http://mastersofcode.com/api/customer',{
+      "firsname": this.first_name,
+      "lastname" : this.last_name,
+      "birthdate":this.birth_date,
+      "gender":this.gender,
+      "email":this.email,
+      "password" : this.pass,
+      "customer_type_id" : 1
+    }).success(function(data){
+      console.log(data);
+    })
+  }
 })
 
 .controller('registerPersonCtrl', function($scope, $http){

@@ -68,16 +68,18 @@ angular.module('starter', ['ionic','ngCordova', 'starter.controllers', 'starter.
           controller: 'RegisterCtrl'
         }
       }
-    })
+  })
+
     .state('tab.choose', {
       url: '/index/choose',
       views: {
         'tab-register': {
           templateUrl: 'templates/choose.html',
           controller: 'ChooseCtrl'
-        }
       }
-    })
+    }
+  })
+
 
     .state('tab.registerPerson', {
     url: '/register/person',
@@ -133,7 +135,7 @@ angular.module('starter', ['ionic','ngCordova', 'starter.controllers', 'starter.
     url: '/account',
     views: {
       'tab-account': {
-        templateUrl: 'templates/tab-account.html',
+        templateUrl: 'templates/choose.html',
         controller: 'AccountCtrl'
       }
     }
