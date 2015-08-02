@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         // $this->call(UserTableSeeder::class);
+        $this->call(CreditCardTypeTableSeeder::class);
+        $this->call(CustomerTypeTableSeeder::class);
 
         Model::reguard();
     }
