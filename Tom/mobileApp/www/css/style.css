@@ -14,3 +14,45 @@
 	width: 200px;
 	margin-top: 25vh;
 }
+
+.formLogin{
+	background-color: transparent;
+}
+
+.logoLogin{
+	margin-top: 25%;
+}
+
+.inputEmail{
+	border-radius: 2px;
+}
+
+.inputPass{
+	margin-top: 4px;
+	border-radius: 2px;
+}
+
+.buttonLogin{
+	background-color: #FFB34E !important;
+    border-color: transparent !important;
+}
+
+.fontColor{
+	color: white;
+	font-size: 12px;
+}
+
+.fontLeft{
+	margin-left: 43%;
+}
+
+.buttoFace{
+	width: 100%;
+	border-radius: 2px;
+}
+
+.buttoTwitter{
+	width: 100%;
+	border-radius: 2px;
+	margin-top: 3px;
+}

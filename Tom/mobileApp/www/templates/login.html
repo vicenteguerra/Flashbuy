@@ -1,28 +1,27 @@
-<ion-view view-title="Register">
+<ion-view class="indexUno">
   <ion-content>
-    <div class="list list-inset">
-      <label class="item item-input">
+    <div class="logo-container">
+      <img src="img/Fblogin.png" class="logo-splash logoLogin">
+    </div>
+    <div class="list list-inset formLogin">
+      <label class="item item-input inputEmail">
         <input ng-model="email" name="email" type="email" placeholder="Email">
       </label>
-      <br>
-      <label class="item item-input">
-        <input ng-model="pass" nafme="pass" type="password" placeholder="Pass">
+      <label class="item item-input inputPass">
+        <input ng-model="pass" nafme="pass" type="password" placeholder="Password">
       </label>
-      <br>
-      <label class="item item-input item-select">
-        <div class="input-label">
-          Type
-        </div>
-        <select>
-          <option>Personal</option>
-          <option selected>Bussines</option>
-        </select>
-      </label>
-      <br>
-      <br>
-      <button ng-click="envia()" class="button button-block button-positive">
-        Register Now!
+      <button ng-click="envia()" class="button button-block button-positive buttonLogin">
+        Log In
       </button>
+      <a class="fontColor">New user?<a class="fontColor"><strong> Sing In</strong></a></a>
+      <a class="fontColor fontLeft">Forgot<a class="fontColor"><strong> Password</strong></a></a>
+      <br>
+      <br>
+      <br>
+      <button class="button icon-left ion-social-facebook button-positive buttoFace">Sign in with Facebook</button>
+      <br>
+      <button class="button icon-left ion-social-twitter button-calm buttoTwitter">Sign in with Twitter</button>
     </div>
   </ion-content>
 </ion-view>
+

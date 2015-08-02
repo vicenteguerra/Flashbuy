@@ -11,9 +11,6 @@ angular.module('starter.controllers', [])
   $timeout(function() {
       $state.go('tab.login');
   }, 3000);
-
-  
-
 })
 
 /*Controlador para hacer la funcionalidad a login*/
