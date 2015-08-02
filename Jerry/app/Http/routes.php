@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('customer', 'Api\customerController');
+Route::resource('payment', 'Api\paymentController');
+Route::resource('social', 'Api\socialController');
