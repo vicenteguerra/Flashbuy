@@ -15,17 +15,18 @@ angular.module('starter.controllers', ['ngCookies'])
 })
 
 /*Controlador para hacer la funcionalidad a login*/
-.controller('LoginCtrl', function($scope, $http) {
+.controller('LoginCtrl', function($scope, $http, $state) {
+  $scope.errorAuth = false;
   $scope.envia = function(){
     $http.post('http://mastersofcode.com/auth/login',{
       "email" : this.email,
       "password" : this.pass
     }).success(function(data, status, xtr){
       console.log("Login");
-      $scope.usuario = $cookies.get('user');
-      $cookies.put('user', true);
+        $state.go('tab.register');
     }).error(function(data){
       console.log("No: " + data.error);
+      $scope.errorAuth = true;
     })
   }
   /*
