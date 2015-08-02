@@ -25,3 +25,5 @@ Route::resource('api/social', 'Api\socialController');
 Route::get('get/code/{id}', function ($id) {
     return QrCode::size(300)->generate($id);
 });
+
+Route::get('mastercard/transaction', 'MastercardController@transaction');
