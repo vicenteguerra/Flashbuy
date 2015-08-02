@@ -78,6 +78,10 @@ angular.module('starter.controllers', ['ngCookies'])
   tab.remove();
 })
 
+.controller('dashboardCtrl', function($scope, $http){
+
+})
+
 .controller('payNowCtrl', function($scope, $http){
   $scope.button = true;
     $scope.generate = function(){

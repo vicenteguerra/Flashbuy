@@ -121,6 +121,16 @@ angular.module('starter', ['ionic','ngCordova', 'starter.controllers', 'starter.
     }
   })
 
+   .state('tab.dashboard', {
+    url: '/account/dashboard',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/dashboard.html',
+        controller: 'dashboardCtrl'
+      }
+    }
+  })
+
      .state('tab.paymentsCharge', {
     url: '/payments/charge',
     views: {
