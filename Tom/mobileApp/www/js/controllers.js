@@ -33,20 +33,56 @@ angular.module('starter.controllers', [])
 
 /*Controlador para hacer la funcionalidad a el registro*/
 .controller('RegisterCtrl', function($scope, $http){
-  console.log("HolaMundo");
   var tab = angular.element(document.querySelector('.tab-nav'));
   var header = angular.element(document.querySelector('.bar-stable'));
   header.remove();
   tab.remove();
 })
 
-
-.controller('ChooseCtrl', function($scope, $stateParams, Chats) {
-  console.log("HOla");
+.controller('registerPersonCtrl', function($scope, $http){
   var tab = angular.element(document.querySelector('.tab-nav'));
   var header = angular.element(document.querySelector('.bar-stable'));
   header.remove();
   tab.remove();
+})
+
+.controller('registerBusinessCtrl', function($scope, $http){
+  var tab = angular.element(document.querySelector('.tab-nav'));
+  var header = angular.element(document.querySelector('.bar-stable'));
+  header.remove();
+  tab.remove();
+})
+
+.controller('businessInformationCtrl', function($scope, $http){
+
+})
+
+
+.controller('ChooseCtrl', function($scope, $stateParams, $state) {
+  var tab = angular.element(document.querySelector('.tab-nav'));
+  var header = angular.element(document.querySelector('.bar-stable'));
+  header.remove();
+  tab.remove();
+  $scope.flag1 = true; //Persons
+  $scope.flag2 = true; //Business
+  $scope.changeColor = function(flag){
+    if(flag == "flag1"){
+      $scope.flag1 = false;
+       $scope.flag2 = true;
+    }else{
+      $scope.flag2 = false;
+       $scope.flag1 = true;
+    }
+  }
+  $scope.next = function(){
+    if(!$scope.flag1){
+      $state.go('tab.registerPerson');
+    }
+    if(!$scope.flag2){
+      $state.go('tab.registerBusiness');
+    }
+  }
+
 })
 
 .controller('AccountCtrl', function($scope) {

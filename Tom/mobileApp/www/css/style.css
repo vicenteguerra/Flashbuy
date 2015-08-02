@@ -81,7 +81,32 @@ hr{
 	margin: 10px;
 }
 
-.register button{
+.yellow{
 	background-color: #FFB34E !important;
 	border: none;
+}
+
+.choose .container, .register .container{
+	text-align: center;
+}
+
+.choose p{
+	color: #fff;
+	font-size: 26px;
+	margin-top: 15vh;
+	display: block;
+}
+
+.choose img{
+	width: 25vw;
+	margin: 10vh 10vw 20vh 10vw;
+	display: inline-block;
+}
+.choose button{
+	bottom: 0;
+}
+
+.img-register{
+	width: 23%;
+	margin: 20px 0;
 }

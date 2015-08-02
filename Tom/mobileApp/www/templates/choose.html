@@ -5,9 +5,17 @@
 
     <div class="list list-inset transparent">
 
+	<div class="container">
+		<p>Who are you?</p>
+		<img ng-click="changeColor('flag1')" ng-show="flag1" src="img/fanc1.png" alt="persons">
+		<img ng-show="!flag1" src="img/fama1.png" alt="persons">
+		<img ng-click="changeColor('flag2')" ng-show="flag2" src="img/fanc2.png" alt="business">
+		<img  ng-show="!flag2" src="img/fama2.png" alt="business">
+	</div>
+
 
       <br>
-      <button ng-click="envia()" class="button button-block button-positive">
+      <button ng-click="next()" class="button button-block button-positive yellow">
         Next
       </button>
     </div>

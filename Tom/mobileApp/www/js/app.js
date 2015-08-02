@@ -72,12 +72,52 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('tab.choose', {
       url: '/index/choose',
       views: {
-        'tab-choose': {
+        'tab-register': {
           templateUrl: 'templates/choose.html',
           controller: 'ChooseCtrl'
         }
       }
     })
+
+    .state('tab.registerPerson', {
+    url: '/register/person',
+    views: {
+      'tab-register': {
+        templateUrl: 'templates/registerPerson.html',
+        controller: 'registerPersonCtrl'
+      }
+    }
+  })
+
+    .state('tab.registerBusiness', {
+    url: '/register/business',
+    views: {
+      'tab-register': {
+        templateUrl: 'templates/registerBusiness.html',
+        controller: 'registerBusinessCtrl'
+      }
+    }
+  })
+
+   .state('tab.businessInformation', {
+    url: '/register/business/information',
+    views: {
+      'tab-register': {
+        templateUrl: 'templates/businessInformation.html',
+        controller: 'businessInformationCtrl'
+      }
+    }
+  })
+
+   .state('tab.payments', {
+    url: '/payments',
+    views: {
+      'tab-payments': {
+        templateUrl: 'templates/businessInformation.html',
+        controller: 'businessInformationCtrl'
+      }
+    }
+  })
 
   .state('tab.account', {
     url: '/account',
