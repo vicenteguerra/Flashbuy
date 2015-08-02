@@ -54,7 +54,10 @@ angular.module('starter.controllers', [])
 })
 
 .controller('businessInformationCtrl', function($scope, $http){
-
+  var tab = angular.element(document.querySelector('.tab-nav'));
+  var header = angular.element(document.querySelector('.bar-stable'));
+  header.remove();
+  tab.remove();
 })
 
 
