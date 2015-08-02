@@ -1,22 +1,24 @@
 angular.module('starter.controllers', [])
 
 .controller('IndexCtrl', function($scope) {
-  var tab = angular.element(document.querySelector('.tab-nav'));
-  tab.remove();
+  /*var tab = angular.element(document.querySelector('.tab-nav'));
+  tab.remove();*/
 })
 
-.controller('RegisterCtrl', function($scope, $htttp) {
+.controller('RegisterCtrl', function($scope, $http) {
   $scope.envia = function(){
-    $http.post('route',{
+    $http.post('http://mastersofcode.com/api/customer',{
       "email" : this.email,
-      "password" : this.pass 
-    }).success(data){
+      "password" : this.pass,
+      headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
+      headers: {"Acces-Control-Allow-Origin" : '*'}
+    }).success(function(data){
       console.log(data);
-    }
+    })
   }
-
+  /*
   var tab = angular.element(document.querySelector('.tab-nav'));
-  tab.remove();
+  tab.remove();*/
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
