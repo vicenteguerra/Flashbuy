@@ -35,4 +35,10 @@ return [
         'secret' => '',
     ],
 
+    'facebook' => [
+    'client_id' => '869766839774821',
+    'client_secret' => '772fc7f849f317a95092c53c4ff1d9fe',
+    'redirect' => 'http://mastersofcode.com',
+    ],
+
 ];
