@@ -61,12 +61,21 @@ angular.module('starter.controllers', [])
 })
 
 .controller('payNowCtrl', function($scope, $http){
+  $scope.button = true;
+    $scope.generate = function(){
+    console.log("get..");
+    $http.get('http://mastersofcode.com/get/code/fuh',{
 
+    }).success(function(data){
+      console.log("Success");
+      console.log(data);
+      var myEl = angular.element( document.querySelector( '#qr' ) );
+      myEl.prepend(data);
+      $scope.button = false;
+    })
+  }
 })
 
-.controller('chargeCtrl', function($scope, $http){
-
-})
 
 
 .controller('ChooseCtrl', function($scope, $stateParams, $state) {
