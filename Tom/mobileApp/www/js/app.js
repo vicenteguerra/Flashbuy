@@ -55,7 +55,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-register': {
           templateUrl: 'templates/login.html',
-          controller: 'RegisterCtrl'
+          controller: 'LoginCtrl'
         }
       }
     })
