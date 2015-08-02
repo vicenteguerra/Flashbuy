@@ -109,12 +109,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-   .state('tab.payments', {
-    url: '/payments',
+   .state('tab.paymentsPayNow', {
+    url: '/payments/paynow',
     views: {
       'tab-payments': {
-        templateUrl: 'templates/businessInformation.html',
-        controller: 'businessInformationCtrl'
+        templateUrl: 'templates/payNow.html',
+        controller: 'payNowCtrl'
+      }
+    }
+  })
+
+     .state('tab.paymentsCharge', {
+    url: '/payments/charge',
+    views: {
+      'tab-payments': {
+        templateUrl: 'templates/charge.html',
+        controller: 'chargeCtrl'
       }
     }
   })

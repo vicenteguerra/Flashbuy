@@ -60,6 +60,14 @@ angular.module('starter.controllers', [])
   tab.remove();
 })
 
+.controller('payNowCtrl', function($scope, $http){
+
+})
+
+.controller('chargeCtrl', function($scope, $http){
+
+})
+
 
 .controller('ChooseCtrl', function($scope, $stateParams, $state) {
   var tab = angular.element(document.querySelector('.tab-nav'));
