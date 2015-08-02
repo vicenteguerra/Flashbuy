@@ -1,5 +1,5 @@
 <?php
-namespace Mastercard\Common;
+namespace App\Mastercard\Common;
 
 class Connector
 {
@@ -69,6 +69,7 @@ class Connector
 	public $signatureBaseString;
 	public $authHeader;
 	
+	protected  $realm;
 	protected $consumerKey;
 	private $privateKey;
 	public $keystorePath;
@@ -161,8 +162,7 @@ class Connector
 	 *
 	 * @return mixed - Raw data returned from the HTTP connection
 	 */
-	protected function doRequest($params,$url,$requestMethod,$body=null){
-	
+	protected function doRequest($params,$url,$requestMethod,$body=null){	
 		if($body != null){
 			$params[Connector::OAUTH_BODY_HASH] = $this->generateBodyHash($body);
 		}
@@ -409,10 +409,10 @@ class Connector
 		
 		
 		curl_setopt($curl,CURLOPT_HTTPHEADER, array(
-												Connector::ACCEPT.Connector::COLON.Connector::SPACE.Connector::APPLICATION_XML,
-												Connector::CONTENT_TYPE.Connector::COLON.Connector::SPACE.Connector::APPLICATION_XML,
-												Connector::AUTHORIZATION.Connector::COLON.Connector::SPACE.$this->buildAuthHeaderString($params,$realm,$url,$requestMethod,$body)
-												));
+			Connector::ACCEPT.Connector::COLON.Connector::SPACE.Connector::APPLICATION_XML,
+			Connector::CONTENT_TYPE.Connector::COLON.Connector::SPACE.Connector::APPLICATION_XML,
+			Connector::AUTHORIZATION.Connector::COLON.Connector::SPACE.$this->buildAuthHeaderString($params,$realm,$url,$requestMethod,$body)
+			));
 		
 		if($requestMethod == Connector::GET){
 			curl_setopt($curl,CURLOPT_HTTPGET,TRUE);
@@ -434,7 +434,8 @@ class Connector
 		
 		// Check for errors and throw an exception
 		if($errorCode = curl_getinfo($curl,CURLINFO_HTTP_CODE) > 300){
-			throw new Exception($result,$errorCode);
+			return $errorCode;
+			//throw new Exception($result,$errorCode);
 		}
 		
 		return $result;

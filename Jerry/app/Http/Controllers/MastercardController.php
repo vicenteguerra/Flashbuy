@@ -8,22 +8,22 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response as IlluminateResponse;
 
 //Master Card
-use Mastercard\Env;
-use Mastercard\Common\Environment;
+use App\Mastercard\Common\Environment;
+use App\Mastercard\Env;
 
-use Mastercard\Services\MoneySend\Services\TransferService;
+use App\Mastercard\Services\MoneySend\Services\TransferService;
 
-use Mastercard\Services\MoneySend\Domain\Transfer; 
-use Mastercard\Services\MoneySend\Domain\TransferRequest;
-use Mastercard\Services\MoneySend\Domain\FundingCard; 
-use Mastercard\Services\MoneySend\Domain\FundingMapped; 
-use Mastercard\Services\MoneySend\Domain\FundingAmount; 
-use Mastercard\Services\MoneySend\Domain\ReceiverAddress; 
-use Mastercard\Services\MoneySend\Domain\SenderAddress; 
-use Mastercard\Services\MoneySend\Domain\ReceivingCard; 
-use Mastercard\Services\MoneySend\Domain\ReceivingMapped; 
-use Mastercard\Services\MoneySend\Domain\ReceivingAmount; 
-use Mastercard\Services\MoneySend\Domain\CardAcceptor; 
+use App\Mastercard\Services\MoneySend\Domain\Transfer; 
+use App\Mastercard\Services\MoneySend\Domain\TransferRequest;
+use App\Mastercard\Services\MoneySend\Domain\FundingCard; 
+use App\Mastercard\Services\MoneySend\Domain\FundingMapped; 
+use App\Mastercard\Services\MoneySend\Domain\FundingAmount; 
+use App\Mastercard\Services\MoneySend\Domain\ReceiverAddress; 
+use App\Mastercard\Services\MoneySend\Domain\SenderAddress; 
+use App\Mastercard\Services\MoneySend\Domain\ReceivingCard; 
+use App\Mastercard\Services\MoneySend\Domain\ReceivingMapped; 
+use App\Mastercard\Services\MoneySend\Domain\ReceivingAmount; 
+use App\Mastercard\Services\MoneySend\Domain\CardAcceptor; 
 
 
 class MastercardController extends Controller {

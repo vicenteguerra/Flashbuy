@@ -1,18 +1,18 @@
 <?php
 
 
-namespace Mastercard\Services\MoneySend\Services;
+namespace App\Mastercard\Services\MoneySend\Services;
 
-use Mastercard\Common\Connector;
-use Mastercard\Common\Environment;
-use Mastercard\Common\Serializer;
+use App\Mastercard\Common\Connector;
+use App\Mastercard\Common\Environment;
+use App\Mastercard\Common\Serializer;
 
-use Mastercard\Services\MoneySend\Domain\Transfer;
-use Mastercard\Services\MoneySend\Domain\TransferRequest;
-use Mastercard\Services\MoneySend\Domain\TransactionHistory;
-use Mastercard\Services\MoneySend\Domain\Transaction;
-use Mastercard\Services\MoneySend\Domain\Response;
-use Mastercard\Services\MoneySend\Domain\PaymentRequest;
+use App\Mastercard\Services\MoneySend\Domain\Transfer;
+use App\Mastercard\Services\MoneySend\Domain\TransferRequest;
+use App\Mastercard\Services\MoneySend\Domain\TransactionHistory;
+use App\Mastercard\Services\MoneySend\Domain\Transaction;
+use App\Mastercard\Services\MoneySend\Domain\Response;
+use App\Mastercard\Services\MoneySend\Domain\PaymentRequest;
 
 
 /*include_once dirname(__FILE__) . '/../../../common/Connector.php';

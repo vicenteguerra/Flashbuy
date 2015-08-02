@@ -1,23 +1,23 @@
 <?php
 
-namespace Mastercard\Services\MoneySend\Services;
+namespace App\Mastercard\Services\MoneySend\Services;
 
-use Mastercard\Common\Connector;
-use Mastercard\Common\Environment;
-use Mastercard\Common\Serializer;
+use App\Mastercard\Common\Connector;
+use App\Mastercard\Common\Environment;
+use App\Mastercard\Common\Serializer;
 
-use Mastercard\Services\MoneySend\Domain\Mapping;
-use Mastercard\Services\MoneySend\Domain\CreateMapping;
-use Mastercard\Services\MoneySend\Domain\CreateMappingRequest;
-use Mastercard\Services\MoneySend\Domain\InquireMappingRequest;
-use Mastercard\Services\MoneySend\Domain\InquireMapping;
-use Mastercard\Services\MoneySend\Domain\ReceivingEligibility;
-use Mastercard\Services\MoneySend\Domain\CardholderFullName;
-use Mastercard\Services\MoneySend\Domain\Address;
-use Mastercard\Services\MoneySend\Domain\Currency;
-use Mastercard\Services\MoneySend\Domain\Country;
-use Mastercard\Services\MoneySend\Domain\Brand;
-use Mastercard\Services\MoneySend\Domain\UpdateMapping;
+use App\Mastercard\Services\MoneySend\Domain\Mapping;
+use App\Mastercard\Services\MoneySend\Domain\CreateMapping;
+use App\Mastercard\Services\MoneySend\Domain\CreateMappingRequest;
+use App\Mastercard\Services\MoneySend\Domain\InquireMappingRequest;
+use App\Mastercard\Services\MoneySend\Domain\InquireMapping;
+use App\Mastercard\Services\MoneySend\Domain\ReceivingEligibility;
+use App\Mastercard\Services\MoneySend\Domain\CardholderFullName;
+use App\Mastercard\Services\MoneySend\Domain\Address;
+use App\Mastercard\Services\MoneySend\Domain\Currency;
+use App\Mastercard\Services\MoneySend\Domain\Country;
+use App\Mastercard\Services\MoneySend\Domain\Brand;
+use App\Mastercard\Services\MoneySend\Domain\UpdateMapping;
 
 /*
 include_once dirname(__FILE__) . '/../../../common/Connector.php';

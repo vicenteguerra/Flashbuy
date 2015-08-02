@@ -1,6 +1,6 @@
 <?php
 
-namespace Mastercard\Services\MoneySend\Domain; 
+namespace App\Mastercard\Services\MoneySend\Domain; 
 
 class TransferReversal {
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Mastercard\Services\MoneySend\Services;
+namespace App\Mastercard\Services\MoneySend\Services;
 
-use Mastercard\Common\Connector;
-use Mastercard\Common\Environment;
-use Mastercard\Common\Serializer;
+use App\Mastercard\Common\Connector;
+use App\Mastercard\Common\Environment;
+use App\Mastercard\Common\Serializer;
 
-use Mastercard\Services\MoneySend\Domain\DeleteSubscriberId;
-use Mastercard\Services\MoneySend\Domain\DeleteSubscriberIdRequest;
+use App\Mastercard\Services\MoneySend\Domain\DeleteSubscriberId;
+use App\Mastercard\Services\MoneySend\Domain\DeleteSubscriberIdRequest;
 
 /*include_once dirname(__FILE__) . '/../../../common/Connector.php';
 include_once dirname(__FILE__) . '/../../../common/Environment.php';

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mastercard\Common;
+namespace App\Mastercard\Common;
 
 class Serializer
 {

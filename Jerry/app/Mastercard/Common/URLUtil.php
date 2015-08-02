@@ -1,6 +1,7 @@
 <?php
 
-namespace Mastercard\Common;
+namespace App\Mastercard\Common;
+
 class URLUtil {
     public static function addQueryParameter($url, $descriptor, $value)
     {

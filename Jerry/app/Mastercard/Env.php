@@ -1,6 +1,8 @@
 <?php
 
-namespace Mastercard;
+namespace App\Mastercard;
+
+use App\Mastercard\Common\Environment;
 
 class Env {
     const SANDBOX_KEYSTORE_PASSWORD = "ivonneg12";
@@ -24,6 +26,7 @@ class Env {
     {
         $keystorePath = "";
         $keystorePassword = "";
+
 
         if ($this->environment == Environment::PRODUCTION)
         {
