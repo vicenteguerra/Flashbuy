@@ -1,0 +1,51 @@
+
+<ion-view  class="indexUno register">
+<a href="#/tab/index/choose" class="button icon-left ion-chevron-left button-clear button-dark white">Back</a>
+  <ion-content >
+
+    <div class="list list-inset transparent">
+    <div class="container">
+		<img src="img/fama2.png" alt="persons" class="img-register">
+	</div>
+
+      <label class="item item-input">
+        <input ng-model="name" name="name" type="text" placeholder="Name(Trade, business, etc)">
+      </label>
+      <label class="item item-input">
+        <input ng-model="line" name="line" type="text" placeholder="Line Business">
+      </label>
+
+      <br><hr><br>
+
+      <label class="item item-input">
+        <input ng-model="branchoffice" name="branchs-office" type="text" placeholder="Branch fwOffice">
+      </label>
+      <label class="item item-input">
+        <input ng-model="country" name="country" type="text" placeholder="Country">
+      </label>
+      <label class="item item-input">
+        <input ng-model="state" name="state" type="text" placeholder="State">
+      </label>
+      <label class="item item-input">
+        <input ng-model="zipcode" name="zip-code" type="text" placeholder="Zip Code">
+      </label>
+      <label class="item item-input">
+        <input ng-model="address" name="address" type="text" placeholder="Address(Street, number)">
+      </label>
+
+	  <br><hr><br>
+
+      <label class="item item-input">
+        <input ng-model="phone1" name="phone1" type="number" placeholder="Telephone 1">
+      </label>
+      <label class="item item-input">
+        <input ng-model="phone2" name="phone2" type="number" placeholder="Telephone 2">
+      </label>
+
+      <br>
+      <button ng-click="next()" class="button button-block button-positive yellow">
+        Next
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -71,6 +71,17 @@ angular.module('starter.controllers', ['ngCookies'])
 })
 
 .controller('businessInformationCtrl', function($scope, $http){
+  var tab = angular.element(document.querySelector('.tab-nav'));
+  var header = angular.element(document.querySelector('.bar-stable'));
+  header.remove();
+  tab.remove();
+})
+
+.controller('payNowCtrl', function($scope, $http){
+
+})
+
+.controller('chargeCtrl', function($scope, $http){
 
 })
 
@@ -99,6 +110,20 @@ angular.module('starter.controllers', ['ngCookies'])
       $state.go('tab.registerBusiness');
     }
   }
+
+})
+
+.controller("scannerController", function($scope, $cordovaBarcodeScanner) {
+
+    $scope.scanBarcode = function() {
+        $cordovaBarcodeScanner.scan().then(function(imageData) {
+            alert(imageData.text);
+            console.log("Barcode Format -> " + imageData.format);
+            console.log("Cancelled -> " + imageData.cancelled);
+        }, function(error) {
+            console.log("An error happened -> " + error);
+        });
+    };
 
 })
 

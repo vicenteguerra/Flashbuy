@@ -86,7 +86,7 @@ hr{
 	border: none;
 }
 
-.choose .container, .register .container{
+.choose .container, .register .container, .payments .container{
 	text-align: center;
 }
 
