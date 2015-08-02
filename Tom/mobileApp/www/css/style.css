@@ -14,3 +14,33 @@
 	width: 200px;
 	margin-top: 25vh;
 }
+
+.white{
+	color: #fff !important;
+}
+
+.transparent{
+	background-color: transparent !important;
+}
+
+.register label{
+	margin-top: 4px;
+	height: 50px;
+	border-radius: 2px;
+}
+
+hr{
+	color: #999;
+	opacity: 0.6;
+}
+
+.register p {
+	color: #fff;
+	display: inline-block;
+	margin: 10px;
+}
+
+.register button{
+	background-color: #FFB34E !important;
+	border: none;
+}

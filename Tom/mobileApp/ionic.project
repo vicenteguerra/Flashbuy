@@ -1,8 +1,10 @@
 {
   "name": "mobileApp",
-  "app_id": "",
-  "proxies": [{
-	"path": "/api",
-	"proxyUrl": "http://mastersofcode.com/api"
-  }]
+  "app_id": "0690d62d",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://mastersofcode.com/api"
+    }
+  ]
 }

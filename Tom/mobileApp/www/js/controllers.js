@@ -7,12 +7,12 @@ angular.module('starter.controllers', [])
   var header = angular.element(document.querySelector('.bar-stable'));
   header.remove();
   tab.remove();
-  
+
   $timeout(function() {
       $state.go('tab.login');
   }, 3000);
 
-  
+
 
 })
 
@@ -35,7 +35,11 @@ angular.module('starter.controllers', [])
 
 /*Controlador para hacer la funcionalidad a el registro*/
 .controller('RegisterCtrl', function($scope, $http){
-  console.log("HolaMundo")
+  console.log("HolaMundo");
+  var tab = angular.element(document.querySelector('.tab-nav'));
+  var header = angular.element(document.querySelector('.bar-stable'));
+  header.remove();
+  tab.remove();
 })
 
 
