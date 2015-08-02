@@ -9,9 +9,7 @@ angular.module('starter.controllers', [])
   $scope.envia = function(){
     $http.post('http://mastersofcode.com/api/customer',{
       "email" : this.email,
-      "password" : this.pass,
-      headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
-      headers: {"Acces-Control-Allow-Origin" : '*'}
+      "password" : this.pass
     }).success(function(data){
       console.log(data);
     })
