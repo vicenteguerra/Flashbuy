@@ -70,11 +70,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
     .state('tab.choose', {
-      url: '/index/login/register/choose',
+      url: '/index/choose',
       views: {
         'tab-choose': {
           templateUrl: 'templates/choose.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'ChooseCtrl'
         }
       }
     })
