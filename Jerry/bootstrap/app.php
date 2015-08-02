@@ -10,6 +10,9 @@
 | the IoC container for the system binding all of the various parts.
 |
 */
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Origin, Content-Type');
+
 
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
