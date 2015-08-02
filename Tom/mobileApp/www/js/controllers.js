@@ -23,7 +23,7 @@ angular.module('starter.controllers', ['ngCookies'])
       "password" : this.pass
     }).success(function(data, status, xtr){
       console.log("Login");
-        $state.go('tab.register');
+        $state.go('tab.dashboard');
     }).error(function(data){
       console.log("No: " + data.error);
       $scope.errorAuth = true;
@@ -44,7 +44,7 @@ angular.module('starter.controllers', ['ngCookies'])
   $scope.enviar = function(){
     console.log(this.first_name, this.last_name, this.birth_date,this.gender,this.email,this.pass);
     $http.post('http://mastersofcode.com/api/customer',{
-      "firsname": this.first_name,
+      "firstname": this.first_name,
       "lastname" : this.last_name,
       "birthdate":this.birth_date,
       "gender":this.gender,
