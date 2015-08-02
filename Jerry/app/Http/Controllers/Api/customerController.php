@@ -48,7 +48,7 @@ class customerController extends Controller
             'password' => 'required|min:6|max:25',
             'birthday' => '|date',
             'gender' => 'in:F,M',
-            'customer_type_id' => 'required|exists:customers_type,customer_type_id',
+            'customer_type_id' => 'exists:customers_type,customer_type_id',
         ]);
 
         if ($validator->fails()) {
@@ -64,6 +64,11 @@ class customerController extends Controller
             $input = $request->all();
             $input['password'] = $hasher->make($request->input('password'));
             $customer = Customer::create($input);
+
+            $user = $customer;
+            \Mail::send('emails.demo', ['user' => $user], function ($m) use ($user) {
+            $m->to($user->email, $user->name)->subject('Your Reminder!');
+        });
 
             $this->_response = [
                 'error' => false,

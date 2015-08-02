@@ -1,3 +1,41 @@
-<br>
-<br>
-<h1>PageRegistro</h1>
+
+<ion-view view-title="Register" class="indexUno register">
+<a class="button icon-left ion-chevron-left button-clear button-dark white">Back</a>
+  <ion-content >
+
+    <div class="list list-inset transparent">
+      <label class="item item-input">
+        <input ng-model="first_name" name="first_name" type="text" placeholder="First Name">
+      </label>
+      <label class="item item-input">
+        <input ng-model="last_name" nafme="last_name" type="text" placeholder="Last Name">
+      </label>
+      <label class="item item-input">
+        <input ng-model="birth_date" name="birth_date" type="date" placeholder="Birth Date">
+      </label>
+      <label class="item item-input">
+        <input ng-model="gender" nafme="gender" type="password" placeholder="Gender">
+      </label>
+
+	  <br><hr><br>
+
+      <label class="item item-input">
+        <input ng-model="email" name="email" type="email" placeholder="Email">
+      </label>
+      <label class="item item-input">
+        <input ng-model="pass" name="pass" type="password" placeholder="Password">
+      </label>
+       <label class="item item-input">
+        <input ng-model="confirm_pass" name="confirm_pass" type="password" placeholder="Confirm Password">
+      </label>
+
+
+	<input type="checkbox" name="newsletter" value="true"><p>I'd like to suscribe to the newsletter  </p>
+
+      <br>
+      <button ng-click="envia()" class="button button-block button-positive">
+        Next
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
