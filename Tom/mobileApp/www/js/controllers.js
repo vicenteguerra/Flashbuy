@@ -43,6 +43,10 @@ angular.module('starter.controllers', [])
 
 .controller('ChooseCtrl', function($scope, $stateParams, Chats) {
   console.log("HOla");
+  var tab = angular.element(document.querySelector('.tab-nav'));
+  var header = angular.element(document.querySelector('.bar-stable'));
+  header.remove();
+  tab.remove();
 })
 
 .controller('AccountCtrl', function($scope) {
