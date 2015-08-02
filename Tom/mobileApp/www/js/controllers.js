@@ -38,6 +38,21 @@ angular.module('starter.controllers', [])
   var header = angular.element(document.querySelector('.bar-stable'));
   header.remove();
   tab.remove();
+
+  $scope.enviar = function(){
+    console.log(this.first_name, this.last_name, this.birth_date,this.gender,this.email,this.pass);
+    $http.post('http://mastersofcode.com/api/customer',{
+      "firsname": this.first_name,
+      "lastname" : this.last_name,
+      "birthdate":this.birth_date,
+      "gender":this.gender,
+      "email":this.email,
+      "password" : this.pass,
+      "customer_type_id" : 1
+    }).success(function(data){
+      console.log(data);
+    })
+  }
 })
 
 
@@ -47,10 +62,4 @@ angular.module('starter.controllers', [])
   var header = angular.element(document.querySelector('.bar-stable'));
   header.remove();
   tab.remove();
-})
-
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
 });

@@ -68,22 +68,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'RegisterCtrl'
         }
       }
-    })
-    .state('tab.choose', {
-      url: '/index/choose',
-      views: {
-        'tab-choose': {
-          templateUrl: 'templates/choose.html',
+  })
+
+  .state('tab.choose', {
+    url: '#/tab/index/choose',
+     views: {
+      'tab-choose': {
+        templateUrl: 'templates/choose.html',
           controller: 'ChooseCtrl'
-        }
       }
-    })
+    }
+  })
+
 
   .state('tab.account', {
     url: '/account',
     views: {
       'tab-account': {
-        templateUrl: 'templates/tab-account.html',
+        templateUrl: 'templates/choose.html',
         controller: 'AccountCtrl'
       }
     }
