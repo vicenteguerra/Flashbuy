@@ -1,2 +1,16 @@
 /* Empty. Add your own CSS if you like */
 
+.indexUno{
+	width: 100%;
+	background-size: 400px auto;
+	background-image: url("../img/Fbckground.png");
+}
+
+.logo-container{
+	text-align: center;
+}
+
+.logo-splash{
+	width: 200px;
+	margin-top: 25vh;
+}

@@ -1,0 +1,28 @@
+<ion-view view-title="Register">
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input ng-model="email" name="email" type="email" placeholder="Email">
+      </label>
+      <br>
+      <label class="item item-input">
+        <input ng-model="pass" nafme="pass" type="password" placeholder="Pass">
+      </label>
+      <br>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Type
+        </div>
+        <select>
+          <option>Personal</option>
+          <option selected>Bussines</option>
+        </select>
+      </label>
+      <br>
+      <br>
+      <button ng-click="envia()" class="button button-block button-positive">
+        Register Now!
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

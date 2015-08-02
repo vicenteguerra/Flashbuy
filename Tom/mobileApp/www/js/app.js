@@ -50,8 +50,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.login', {
+      url: '/index/login',
+      views: {
+        'tab-register': {
+          templateUrl: 'templates/login.html',
+          controller: 'RegisterCtrl'
+        }
+      }
+    })
+
   .state('tab.register', {
-      url: '/register',
+      url: '/index/login/register',
       views: {
         'tab-register': {
           templateUrl: 'templates/register.html',
@@ -59,11 +69,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.choose', {
+      url: '/index/login/register/choose',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
+        'tab-choose': {
+          templateUrl: 'templates/choose.html',
           controller: 'ChatDetailCtrl'
         }
       }
@@ -80,6 +90,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/index');
+  $urlRouterProvider.otherwise('/tab/index'); 
 
 });
