@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
+use Input;
+use Validator;
+use App\Customer;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -37,7 +39,25 @@ class customerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'firsname' => 'min:1|max:255',
+            'lastname' => 'min:1|max:255',
+            'email' => 'required|email|unique:customers,email',
+            'phone' => '',
+            'password' => 'required|min:6|max:25',
+            'birthday' => '|date',
+            'gender' => 'in:F,M',
+            'customer_type_id' => 'required|exists:customers_type,customer_type_id',
+        ]);
+
+        if ($validator->fails()) {
+            //var_dump($validator->messages());die;   
+            return response()->json($validator->messages());
+        }
+
+        $input = Input::all();
+        Customer::create($request->all());
+        return response()->json('create');
     }
 
     /**
@@ -48,7 +68,7 @@ class customerController extends Controller
      */
     public function show($id)
     {
-
+        return json_encode(['customer' =>$id]);
     }
 
     /**
