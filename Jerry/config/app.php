@@ -143,7 +143,8 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        /*'Tymon\JWTAuth\Providers\JWTAuthServiceProvider'*/
+        'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class
     ],
 
     /*
@@ -191,7 +192,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        /*'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth'*/
+        'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth',
+        'QrCode' => 'SimpleSoftwareIO\QrCode\Facades\QrCode'
     ],
 
 ];
