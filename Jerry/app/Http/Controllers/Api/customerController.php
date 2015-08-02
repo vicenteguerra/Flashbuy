@@ -65,10 +65,10 @@ class customerController extends Controller
             $input['password'] = $hasher->make($request->input('password'));
             $customer = Customer::create($input);
 
-            $user = $customer;
+            /*$user = $customer;
             \Mail::send('emails.demo', ['user' => $user], function ($m) use ($user) {
-            $m->to($user->email, $user->name)->subject('Your Reminder!');
-        });
+                $m->to($user->email, $user->name)->subject('Your Reminder!');
+            });*/
 
             $this->_response = [
                 'error' => false,
